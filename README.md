@@ -2,6 +2,12 @@
 
 Extended grammar for JavaScript to improve support for SQL development in JS.
 
+## Installation
+
+The package is not published to the Marketplace. Manual installation is required.
+
+Download `sbks-vscode-grammar-N.N.N.vsix` file from [Releases](https://github.com/Gobie/sbks-vscode-grammar/releases) and run `code --install-extension sbks-vscode-grammar-N.N.N.vsix`.
+
 ## Features
 
 * Syntax highlighting support for SQL inside template strings
