@@ -56,6 +56,7 @@ Download `sbks-vscode-grammar-N.N.N.vsix` file from [Releases](https://github.co
 * `meta.embedded.template.variable.sql` - `var`, `1`
 * `meta.filter.full.sql` - [full formatting filter](https://github.com/vitaly-t/pg-promise#formatting-filters) (`:name`, `:raw`, etc)
 * `meta.filter.short.sql` - [short formatting filter](https://github.com/vitaly-t/pg-promise#formatting-filters) (`^`, `~`, `#`)
+* `keyword.pg-index` - `[PG INDEX]`
 
 More information can be found in extension's `syntaxes/sql-injection.json`.
 
