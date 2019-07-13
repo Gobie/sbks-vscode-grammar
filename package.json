@@ -6,6 +6,9 @@
     "engines": {
         "vscode": "^1.36.0"
     },
+    "scripts": {
+        "package": "vsce package --baseImagesUrl=https://raw.githubusercontent.com/Gobie/sbks-vscode-grammar/master/"
+    },
     "publisher": "Gobie",
     "contributes": {
         "grammars": [

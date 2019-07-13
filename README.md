@@ -39,7 +39,7 @@ Extended grammar for JavaScript to improve support for SQL development in JS.
   // [PG INDEX] full_index_name, another_index_name
   ```
 
-  ![comment \[PG INDEX\]](images/comment-pg-index.png)
+  ![comment PG INDEX](images/comment-pg-index.png)
 
 ## Grammar scopes
 
