@@ -1,0 +1,127 @@
+{
+	"injectionSelector": "L:source -comment -string",
+	"patterns": [
+		{
+			"include": "#sql-template-block"
+		}
+	],
+	"repository": {
+		"sql-template-block": {
+			"name": "meta.embedded.sql",
+			"contentName": "meta.embedded.block.sql",
+			"begin": "(?:(?<=sql\\s=\\s)|(?<=sql\\s\\+=\\s)|(?<=/\\*\\ssql\\s\\*/)|(?<=\\.none\\()|(?<=\\.one\\()|(?<=\\.oneOrNone\\()|(?<=\\.many\\()|(?<=\\.manyOrNone\\()|(?<=\\.any\\())(`)",
+			"beginCaptures": {
+				"0": {
+					"name": "string.js"
+				},
+				"1": {
+					"name": "punctuation.definition.string.template.begin.js"
+				}
+			},
+			"end": "(`)",
+			"endCaptures": {
+				"0": {
+					"name": "string.js"
+				},
+				"1": {
+					"name": "punctuation.definition.string.template.end.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#sql-formatted-index-variable"
+				},
+				{
+					"include": "#sql-template-substitution-parentheses-element"
+				},
+				{
+					"include": "#sql-template-substitution-escaped-curly-element"
+				},
+				{
+					"include": "source.js#template-substitution-element"
+				},
+				{
+					"include": "source.sql"
+				}
+			]
+		},
+		"sql-template-substitution-parentheses-element": {
+			"name": "meta.embedded.template.expression.sql",
+			"begin": "\\$\\(",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.template.begin.sql"
+				}
+			},
+			"end": "\\)",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.template.end.sql"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#sql-formatted-named-variable"
+				}
+			]
+		},
+		"sql-template-substitution-escaped-curly-element": {
+			"name": "meta.embedded.template.expression.sql",
+			"begin": "\\\\\\$\\{",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.template.begin.sql"
+				}
+			},
+			"end": "\\}",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.template.end.sql"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#sql-formatted-named-variable"
+				}
+			]
+		},
+		"sql-formatted-named-variable": {
+			"match": "([_$[:alpha:]][_$[:alnum:]]*)(?:(:alias|:name|:csv|:list|:raw|:value|:json)|([$#^]))?",
+			"captures": {
+				"0": {
+					"name": "meta.embedded.template.variable.sql"
+				},
+				"1": {
+					"name": "variable.other.readwrite.js"
+				},
+				"2": {
+					"name": "meta.filter.full.sql"
+				},
+				"3": {
+					"name": "meta.filter.short.sql"
+				}
+			}
+		},
+		"sql-formatted-index-variable": {
+			"match": "\\$((\\d+)(?:(:alias|:name|:csv|:list|:raw|:value|:json)|([$#^]))?)",
+			"captures": {
+				"0": {
+					"name": "meta.embedded.template.expression.sql"
+				},
+				"1": {
+					"name": "meta.embedded.template.variable.sql"
+				},
+				"2": {
+					"name": "variable.other.readwrite.js"
+				},
+				"3": {
+					"name": "meta.filter.full.sql"
+				},
+				"4": {
+					"name": "meta.filter.short.sql"
+				}
+			}
+		}
+	},
+	"scopeName": "sql.injection"
+}

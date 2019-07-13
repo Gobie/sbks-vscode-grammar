@@ -1,0 +1,15 @@
+{
+	"injectionSelector": "L:comment.line.double-slash",
+  "patterns": [
+    {
+      "include": "#pg-index-keyword"
+    }
+  ],
+  "repository": {
+    "pg-index-keyword": {
+      "match": "\\[PG INDEX\\]",
+      "name": "keyword.pg-index"
+    }
+  },
+	"scopeName": "pg-index.injection"
+}

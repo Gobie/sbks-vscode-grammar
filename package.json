@@ -1,0 +1,38 @@
+{
+    "name": "sbks-vscode-grammar",
+    "displayName": "sbks-vscode-grammar",
+    "description": "SBKS extended grammar",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "publisher": "Gobie",
+    "contributes": {
+        "grammars": [
+            {
+                "path": "./syntaxes/sql.injection.json",
+                "scopeName": "sql.injection",
+                "injectTo": [
+                    "source.js"
+                ],
+                "embeddedLanguages": {
+                    "meta.embedded.inline.sql": "source.sql"
+                },
+                "tokenTypes": {
+                    "meta.embedded.inline.sql": "other"
+                }
+            },
+            {
+                "path": "./syntaxes/pg-index.injection.json",
+                "scopeName": "pg-index.injection",
+                "injectTo": [
+                    "source.js"
+                ]
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Gobie/sbks-vscode-grammar.git"
+    }
+}
