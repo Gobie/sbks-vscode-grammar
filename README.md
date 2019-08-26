@@ -16,12 +16,13 @@ Download `sbks-vscode-grammar-N.N.N.vsix` file from [Releases](https://github.co
   sql = `...`
   sql += `...`
   /* sql */`...`
-  .none(`...`
-  .one(`...`
-  .oneOrNone(`...`
-  .many(`...`
-  .manyOrNone(`...`
-  .any(`...`
+  .none(`...` // pg-promise
+  .one(`...` // pg-promise
+  .oneOrNone(`...` // pg-promise
+  .many(`...` // pg-promise
+  .manyOrNone(`...` // pg-promise
+  .any(`...` // pg-promise
+  .runSql(`...` // db-migrate
   ```
 
   ![SQL syntax highlighting](images/sql-syntax-template-string.png)
