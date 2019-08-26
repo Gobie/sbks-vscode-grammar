@@ -2,7 +2,7 @@
     "name": "sbks-vscode-grammar",
     "displayName": "sbks-vscode-grammar",
     "description": "SBKS extended grammar",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "engines": {
         "vscode": "^1.36.0"
     },
