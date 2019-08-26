@@ -9,7 +9,7 @@
 		"sql-template-block": {
 			"name": "meta.embedded.sql",
 			"contentName": "meta.embedded.block.sql",
-			"begin": "(?:(?<=sql\\s=\\s)|(?<=sql\\s\\+=\\s)|(?<=/\\*\\ssql\\s\\*/)|(?<=\\.none\\()|(?<=\\.one\\()|(?<=\\.oneOrNone\\()|(?<=\\.many\\()|(?<=\\.manyOrNone\\()|(?<=\\.any\\())(`)",
+			"begin": "(?:(?<=sql\\s=\\s)|(?<=sql\\s\\+=\\s)|(?<=/\\*\\ssql\\s\\*/)|(?<=\\.none\\()|(?<=\\.one\\()|(?<=\\.oneOrNone\\()|(?<=\\.many\\()|(?<=\\.manyOrNone\\()|(?<=\\.any\\()|(?<=\\.runSql\\())(`)",
 			"beginCaptures": {
 				"0": {
 					"name": "string.js"

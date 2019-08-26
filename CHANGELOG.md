@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.1.0] - 2019-08-26
+
+### Added
+
+- Syntax highlighting support for `runSql`
+
 ## [1.0.0] - 2019-07-13
 
 ### Added

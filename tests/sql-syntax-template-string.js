@@ -21,3 +21,6 @@ someVar.oneOrNone(`SELECT t1.c1 AS a1`)
 someVar.many(`SELECT t1.c1 AS a1`)
 someVar.manyOrNone(`SELECT t1.c1 AS a1`)
 someVar.any(`SELECT t1.c1 AS a1`)
+
+// db-migrate functions
+someVar.runSql(`SELECT t1.c1 AS a1`)
